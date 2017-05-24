@@ -431,6 +431,10 @@ KBUILD_AFLAGS   := -D__ASSEMBLY__ $(call cc-option,-fno-PIE)
 		   -Wno-memset-elt-size \
 		   -std=gnu89 $(CLANG_FLAGS)
 
+# TODO: remove me b/62057517
+KBUILD_CFLAGS += \
+	-Wno-gcc-compat \
+
 KBUILD_AFLAGS_KERNEL :=
 KBUILD_CFLAGS_KERNEL :=
 KBUILD_AFLAGS   := -D__ASSEMBLY__ $(CLANG_FLAGS)
